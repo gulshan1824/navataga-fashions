@@ -6,7 +6,7 @@ const Footer = () => (
     <div style={styles.weave} />
     <div className="container" style={styles.inner}>
 
-      <div style={styles.top}>
+      <div className="footer-top">
         <div style={styles.brand}>
           <div style={styles.logo}>NAVATAGA FASHIONS</div>
           <div style={styles.tagline}>Premium Indian Ethnic Wear · Varanasi</div>
@@ -18,7 +18,7 @@ const Footer = () => (
           </p>
         </div>
 
-        <div style={styles.quote}>
+        <div className="footer-quote" style={styles.quote}>
           <span style={styles.quoteOpen}>"</span>
           <p style={styles.quoteText}>
             In every Banarasi saree lives a story — of silk kissed by gold, of looms
@@ -31,7 +31,6 @@ const Footer = () => (
         <div style={styles.links}>
           <div style={styles.linksTitle}>Navigate</div>
           <Link to="/" style={styles.link}>Collection</Link>
-          <Link to="/admin" style={styles.link}>Admin</Link>
         </div>
       </div>
 
@@ -63,12 +62,6 @@ const styles = {
     backgroundSize: '24px 24px',
   },
   inner: { position: 'relative', zIndex: 1, paddingTop: '4rem', paddingBottom: '2rem' },
-  top: {
-    display: 'grid',
-    gridTemplateColumns: '2fr 2fr 1fr',
-    gap: '4rem',
-    marginBottom: '3rem',
-  },
   brand: {},
   logo: {
     fontFamily: 'var(--font-heading)',

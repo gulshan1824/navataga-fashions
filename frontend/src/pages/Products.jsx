@@ -45,15 +45,15 @@ const Products = () => {
   return (
     <>
     <HeroBanner />
-    <div style={collectionHeadingStyles.wrap}>
-      <div style={collectionHeadingStyles.line} />
+    <div className="collection-heading">
+      <div className="collection-heading-line" />
       <div style={collectionHeadingStyles.center}>
         <div style={collectionHeadingStyles.label}>Our Collection</div>
         <div style={collectionHeadingStyles.sub}>
           Discover the finest Banarasi silk &amp; cotton weaves, curated from master looms of Varanasi
         </div>
       </div>
-      <div style={collectionHeadingStyles.line} />
+      <div className="collection-heading-line" />
     </div>
     <div className="container products-page">
       <aside className="products-sidebar">
