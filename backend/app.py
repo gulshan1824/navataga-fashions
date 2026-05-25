@@ -21,7 +21,7 @@ SHEET_CSV_URL = (
 )
 
 db = SQLAlchemy(app)
-CORS(app, origins=["http://localhost:5173"])
+CORS(app)
 
 
 class Product(db.Model):
@@ -265,4 +265,5 @@ def proxy_image():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    port = int(os.environ.get('PORT', 5001))
+    app.run(host='0.0.0.0', debug=False, port=port)
