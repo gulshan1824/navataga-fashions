@@ -53,9 +53,11 @@ function normaliseImageUrl(raw) {
   if (!raw) return null;
   raw = raw.trim();
   let m = raw.match(/drive\.google\.com\/file\/d\/([A-Za-z0-9_-]+)/);
-  if (m) return `https://drive.google.com/uc?export=view&id=${m[1]}`;
+  if (m) return `https://drive.google.com/thumbnail?id=${m[1]}&sz=w600`;
   m = raw.match(/drive\.google\.com\/open\?id=([A-Za-z0-9_-]+)/);
-  if (m) return `https://drive.google.com/uc?export=view&id=${m[1]}`;
+  if (m) return `https://drive.google.com/thumbnail?id=${m[1]}&sz=w600`;
+  m = raw.match(/[?&]id=([A-Za-z0-9_-]+)/);
+  if (m && raw.includes('drive.google.com')) return `https://drive.google.com/thumbnail?id=${m[1]}&sz=w600`;
   if (raw.startsWith('http')) return raw;
   return null;
 }
