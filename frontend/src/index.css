@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@300;400;500;600&display=swap');
+
+:root {
+  --maroon: #6D1A36;
+  --maroon-dark: #4E1027;
+  --maroon-light: #8B2244;
+  --gold: #C9A84C;
+  --gold-light: #E8D5A3;
+  --gold-pale: #F7F0DC;
+  --ivory: #FDF8EF;
+  --cream: #F5EAD5;
+  --dark: #1A0A06;
+  --text: #2C1A0E;
+  --gray: #8A7060;
+  --white: #ffffff;
+  --shadow: 0 8px 32px rgba(0,0,0,0.55), 0 0 0 1px rgba(201,168,76,0.12);
+  --shadow-hover: 0 20px 50px rgba(0,0,0,0.75), 0 0 0 1px rgba(201,168,76,0.35), 0 0 20px rgba(201,168,76,0.08);
+  --radius: 6px;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Nunito', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #0E0208;
+  background-image:
+    linear-gradient(160deg, rgba(16,2,8,0.97) 0%, rgba(61,13,31,0.92) 30%, rgba(109,26,54,0.88) 65%, rgba(44,10,24,0.97) 100%),
+    repeating-linear-gradient(0deg,   rgba(201,168,76,0.065) 0, rgba(201,168,76,0.065) 1px, transparent 1px, transparent 24px),
+    repeating-linear-gradient(90deg,  rgba(201,168,76,0.065) 0, rgba(201,168,76,0.065) 1px, transparent 1px, transparent 24px),
+    repeating-linear-gradient(45deg,  rgba(201,168,76,0.028) 0, rgba(201,168,76,0.028) 1px, transparent 1px, transparent 24px),
+    repeating-linear-gradient(-45deg, rgba(201,168,76,0.028) 0, rgba(201,168,76,0.028) 1px, transparent 1px, transparent 24px);
+  background-attachment: fixed;
+  color: rgba(253,248,239,0.82);
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn {
+  padding: 11px 24px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background-color: transparent;
+  color: var(--gold-light);
+  border: 1.5px solid rgba(201,168,76,0.45);
+}
+
+.btn-primary:hover {
+  background-color: var(--gold);
+  color: var(--maroon-dark);
+  border-color: var(--gold);
+}
+
+.btn-gold {
+  background-color: var(--gold);
+  color: var(--maroon-dark);
+  font-weight: 700;
+}
+
+.btn-gold:hover {
+  background-color: #b8922f;
+  color: var(--dark);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--maroon);
+  color: var(--maroon);
+}
+
+.btn-outline:hover {
+  background: var(--maroon);
+  color: var(--gold-light);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  background-color: rgba(201,168,76,0.15);
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid rgba(201,168,76,0.35);
+}
+
+/* Dark background search input placeholder */
+.dark-input::placeholder { color: rgba(232,213,163,0.35); }
+.dark-input:focus { border-color: rgba(201,168,76,0.5) !important; outline: none; }
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Decorative gold divider */
+.gold-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0.75rem 0;
+}
+
+/* ── Heritage pillars grid ───────────────────────────────────────────────── */
+
+.heritage-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+/* ── Footer responsive ───────────────────────────────────────────────────── */
+
+.site-footer-top {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 4rem;
+}
+
+/* ── Responsive layout classes ───────────────────────────────────────────── */
+
+.products-page {
+  display: flex;
+  gap: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.products-sidebar {
+  flex: 0 0 240px;
+}
+
+.products-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.admin-layout {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.filter-chips {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Navbar logo wrap prevention */
+.nav-logo {
+  white-space: nowrap;
+}
+
+/* ── Breakpoints ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .detail-grid {
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-page {
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  .products-sidebar {
+    flex: none;
+    width: 100%;
+  }
+
+  .filter-chips {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-layout .admin-form-section {
+    width: 100%;
+    flex: none;
+  }
+
+  .heritage-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .heritage-pillar {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(201,168,76,0.18);
+    padding: 2rem 1.5rem;
+  }
+
+  .heritage-pillar:last-child {
+    border-bottom: none;
+  }
+
+  .nav-tagline {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 1rem !important;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  .nav-logo {
+    font-size: 0.85rem !important;
+    letter-spacing: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .detail-grid {
+    gap: 1.5rem;
+  }
+
+  body {
+    background-attachment: scroll;
+  }
+}

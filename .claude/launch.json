@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "fashion-store-frontend",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/gulshan.raj/Downloads/fashion-store/frontend"],
+      "port": 5173
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+env/
+
+# Flask / SQLite
+backend/store.db
+instance/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.npm
+
+# OS
+.DS_Store
+*.log
