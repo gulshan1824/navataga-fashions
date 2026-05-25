@@ -18,9 +18,6 @@ const Navbar = () => {
             <Link to="/" style={{ ...styles.link, ...(pathname === '/' ? styles.active : {}) }}>
               Collection
             </Link>
-            <Link to="/admin" style={{ ...styles.link, ...(pathname === '/admin' ? styles.active : {}) }}>
-              Admin
-            </Link>
           </div>
         </div>
       </nav>
